@@ -3,10 +3,13 @@ object h1 extends App {
   val as = "[0-9]+".r
   for (as <- as.findAllIn("231r442,qwdqd23")) print(as)
 
-  def sum(a:Int,b:Int,c:Int) = a+b+c
-  val fa = sum _
-  val fac = sum (1,2,_:Int)
-  print(fac(9))
+  println("\n-----------------")
+  def suma(a:Int,b:Int,c:Int) = a+b+c
+  val fac = suma (1,2,_:Int)
+  println(fac(9))
+
+  val fa = suma _      //空格下划线就表示是一个函数
+  println(fa(1,2,3))
 
   (1 to 9).map("*"*_)foreach(println)
 
